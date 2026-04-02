@@ -9,6 +9,7 @@
 	<style type="text/css">
 		#header-title {
 			font-size: 24px;
+			font-family: Arial, sans-serif;
 		}
 
 		#visualization-activity {
@@ -16,7 +17,51 @@
 			height: 500px;
 		}
 
+
 		/* YOUR CSS CODE WILL GO HERE */
+
+		.textclass {
+			font-size : 9px;
+			text-anchor : middle;
+			font-family: Arial, sans-serif;
+		}
+		.barline1 {
+			fill : rgb(26, 26, 196)
+		}
+
+		.barline2 {
+			fill : rgb(1, 164, 1);
+		}
+		.barline3 {
+			fill : rgb(249, 147, 37);
+		}
+
+		.axis-label {
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			text-anchor: middle;
+		}
+
+		.y-tick-label {
+			font-size: 10px;
+			font-family: Arial, sans-serif;
+			text-anchor: end;
+		}
+
+		.legend-text {
+			font-size: 11px;
+			font-family: Arial, sans-serif;
+		}
+
+		.axis-line {
+			stroke: black;
+			stroke-width: 2;
+		}
+
+		.tick-line {
+			stroke: black;
+			stroke-width: 1;
+		}
 
 
 	</style>
@@ -24,12 +69,71 @@
 
 <body>
 	<h1 id="header-title">
-		In-Class Acitivity by REPLACE_WITH_YOUR_NAME
+		In-Class Activity by Heeyong Kim
 	</h1>
 
 	<svg id="visualization-activity">
 		<!-- YOUR SVG CODE WILL GO HERE -->
 
+		<!-- Y-axis -->
+		<line class="axis-line" x1="80" y1="80" x2="80" y2="400" />
+		<text class="axis-label" x="25" y="225" transform="rotate(-90 25 225)">Entry Count</text>
+		
+
+
+		<line class="tick-line" x1="72" y1="400" x2="80" y2="400" />
+		<text class="y-tick-label" x="68" y="404">0</text>
+
+		<line class="tick-line" x1="72" y1="360" x2="80" y2="360" />
+		<text class="y-tick-label" x="68" y="363">10,000</text>
+
+		<line class="tick-line" x1="72" y1="320" x2="80" y2="320" />
+		<text class="y-tick-label" x="68" y="323">20,000</text>
+
+		<line class="tick-line" x1="72" y1="280" x2="80" y2="280" />
+		<text class="y-tick-label" x="68" y="283">30,000</text>
+
+		<line class="tick-line" x1="72" y1="240" x2="80" y2="240" />
+		<text class="y-tick-label" x="68" y="243">40,000</text>
+
+		<line class="tick-line" x1="72" y1="200" x2="80" y2="200" />
+		<text class="y-tick-label" x="68" y="203">50,000</text>
+
+		<line class="tick-line" x1="72" y1="160" x2="80" y2="160" />
+		<text class="y-tick-label" x="68" y="163">60,000</text>
+
+		<line class="tick-line" x1="72" y1="120" x2="80" y2="120" />
+		<text class="y-tick-label" x="68" y="123">70,000</text>
+
+		<line class="tick-line" x1="72" y1="80" x2="80" y2="80" />
+		<text class="y-tick-label" x="68" y="83">80,000</text>
+
+
+
+		<!-- Bar charts -->
+		<rect class="barline2" x="100" y="108.504" width="50" height="291.496" />
+		<text class="textclass" x="125" y="420">홍대입구</text>
+
+		<rect class="barline2" x="170" y="147.66" width="50" height="252.34" />
+		<text class="textclass" x="195" y="420">잠실(송파구청)</text>
+
+		<rect class="barline3" x="240" y="185.736" width="50" height="214.264" />
+		<text class="textclass" x="265" y="420">고속터미널</text>
+
+		<rect class="barline1" x="310" y="237.532" width="50" height="162.468" />
+		<text class="textclass" x="335" y="420">서울역</text>
+
+		<rect class="barline2" x="380" y="247.132" width="50" height="152.868" />
+		<text class="textclass" x="405" y="420">신림</text>
+
+		<rect class="barline2" x="450" y="249.916" width="50" height="150.084" />
+		<text class="textclass" x="475" y="420">신도림</text>
+
+
+		<!-- X-axis -->
+		<line class="axis-line" x1="80" y1="400" x2="520" y2="400" />
+		<text class="axis-label" x="290" y="450">Station Name</text>
+		
 
 	</svg>
 
